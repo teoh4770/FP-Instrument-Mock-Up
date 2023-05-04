@@ -1,0 +1,75 @@
+#menu {
+  position: absolute;
+  background-color: var(--primary);
+  top: 0;
+  left: 0;
+  height: 100svh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+#menu-items {
+  margin-left: clamp(2rem, 10vw, 24rem);
+  z-index: 2;
+}
+
+.menu-item {
+  color: var(--secondary);
+  font-size: clamp(2rem, 7vw, 5rem);
+
+  display: block;
+  padding: clamp(0.2rem, 0.5vw, 1rem) 0rem;
+
+  transition: opacity 400ms ease;
+}
+
+#menu-items:hover > .menu-item {
+  opacity: 0.3;
+}
+
+#menu-items:hover > .menu-item:hover {
+  opacity: 1;
+}
+
+#menu-background-pattern {
+  height: 100vh;
+  width: 100vw;
+
+  background-image: radial-gradient(
+    rgba(255, 255, 255, 0.1) 9%,
+    transparent 9%
+  );
+  background-size: 12vmin 12vmin;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+
+  background-position: 0% 0%;
+
+  transition: opacity 800ms ease, background-size 800ms ease,
+    background-position 800ms ease;
+}
+
+#menu-items:hover ~ #menu-background-pattern {
+  background-size: 11vmin 11vmin;
+  opacity: 0.5;
+}
+
+#menu[data-active-index="0"] > #menu-background-pattern {
+  background-position: 0% -25%;
+}
+
+#menu[data-active-index="1"] > #menu-background-pattern {
+  background-position: 0% -50%;
+}
+
+#menu[data-active-index="2"] > #menu-background-pattern {
+  background-position: 0% -75%;
+}
+
+#menu[data-active-index="3"] > #menu-background-pattern {
+  background-position: 0% -100%;
+}
+/* end styling */

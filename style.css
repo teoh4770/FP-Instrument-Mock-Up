@@ -1,4 +1,4 @@
-
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
 
 /***
   Josh Comeau CSS Reset 
@@ -80,21 +80,22 @@ h6 {
 ***/
 :root {
   /* color */
-  --white: hsl(0, 0%, 100%);
-  --green: hsl(176, 100%, 38%);
-  --yellow: hsl(45, 100%, 50%);
-  --orange: hsl(20, 100%, 55%);
-  --blue: hsl(227, 73%, 42%);
-  --red: hsl(356, 96%, 45%);
-  --pink: hsl(327, 71%, 65%);
+  --purple: hsl(231, 100%, 71%);
+  --beige-orange: hsl(14, 100%, 78%);
 
   /* neutral color */
-  --black: hsl(0, 0%, 20%);
-  --white: hsl(0, 0%, 100%);
+  --primary: hsl(0, 0%, 0%);
+  --secondary: hsl(0, 0%, 100%);
 
   /* font */
   --ff-serif: "Roboto", sans-serif;
   --fs-normal: 16px;
+
+  /* general spacing */
+  --padding: 2rem;
+
+  /* component */
+  --nav-height: 3rem;
 }
 
 /* end custom variables */
@@ -102,6 +103,10 @@ h6 {
 /***
   Utility class
 ***/
+.underline {
+  text-decoration: underline;
+}
+
 .active {
   font-weight: bold;
 }
@@ -120,10 +125,13 @@ h6 {
   height: 1px;
   padding: 0;
   margin: -1px;
+  visibility: hidden;
+  opacity: 0;
   overflow: hidden;
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border-width: 0;
+  transition: visibility 0s, opacity 0.5s linear;
 }
 
 /* 
@@ -134,9 +142,12 @@ This can be useful when you want to visually hide something on small screens but
   height: auto;
   padding: 0;
   margin: 0;
+  visibility: visible;
+  opacity: 1;
   overflow: visible;
   clip: auto;
   white-space: normal;
+  transition: visibility 0s, opacity 0.5s linear;
 }
 
 .fw-normal {
@@ -152,39 +163,31 @@ This can be useful when you want to visually hide something on small screens but
 }
 
 .text-dark {
-  color: var(--black);
+  color: var(--primary);
 }
 
 .text-white {
-  color: var(--white);
+  color: var(--secondary);
 }
 
-.text-pink {
-  color: var(--pink);
+.bg-dark {
+  background-color: var(--primary);
 }
 
 .bg-white {
-  background-color: var(--white);
+  background-color: var(--secondary);
 }
 
-.bg-blue {
-  background-color: var(--blue);
+.pointer {
+  cursor: pointer;
 }
 
-.bg-green {
-  background-color: var(--green);
-}
-
-.bg-orange {
-  background-color: var(--orange);
-}
-
-.bg-yellow {
-  background-color: var(--yellow);
-}
-
-.bg-red {
-  background-color: var(--red);
+a,
+a:hover,
+a:link,
+a:visited,
+a:active {
+  text-decoration: none;
 }
 
 /* end utility class */
@@ -193,28 +196,55 @@ This can be useful when you want to visually hide something on small screens but
 body {
   font-family: var(--ff-serif);
   font-size: var(--fs-normal);
-  font-weight: bold;
-  color: var(--black);
+  font-weight: medium;
+  color: var(--secondary);
+  background-color: var(--primary);
   transition: background-color 300ms linear;
-  padding: 2rem;
+  /* padding: 2rem; */
+  position: relative;
+}
+
+svg {
+  fill: currentColor;
 }
 
 a {
   text-decoration: none;
-  color: var(--white);
+  color: var(--secondary);
+  opacity: 0.85;
+  font-size: 0.9rem;
+  position: relative;
 }
 
 a:hover {
-  text-decoration: underline;
   text-decoration-skip-ink: all;
+}
+
+a::before,
+a::after {
+  position: relative;
+  color: var(--secondary);
+  opacity: 0;
+  transition: opacity 250ms ease;
+}
+
+a::before {
+  content: "[";
+  left: -7.5px;
+}
+
+a::after {
+  content: "]";
+  right: -7.5px;
 }
 
 a:active {
   font-weight: bold;
 }
 
-a.active {
-  transition: 250ms;
+a:hover::before,
+a:hover::after {
+  opacity: 0.7;
 }
 
 ul {
@@ -225,4 +255,58 @@ ul {
 
 button {
   all: unset;
+}
+
+/* styling here */
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: var(--nav-height, 64px);
+  padding: var(--padding, 2rem);
+}
+
+.navbar--mobile {
+  display: none;
+  /* z-index: */
+}
+
+@media (max-width: 770px) {
+  .navbar {
+    display: none;
+  }
+
+  .navbar + .navbar--mobile {
+    display: block;
+  }
+}
+
+.navbar__links {
+  display: flex;
+  gap: clamp(2.5rem, 5vw, 3.125rem);
+}
+
+.navbar__menu-btn {
+  color: var(--secondary);
+}
+
+.menu {
+  height: calc(100% - 64px);
+}
+
+.menu-container {
+  height: 100%;
+  display: flex;
+  align-items: end;
+}
+
+.menu-items {
+  padding-left: var(--padding, 2rem);
+  padding-bottom: 6rem;
+}
+
+.menu-item {
+  position: relative;
+  padding: 0.5rem 0;
 }
