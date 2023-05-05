@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="">
 
 <head>
   <meta charset="UTF-8">
@@ -9,8 +9,8 @@
   <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
-  <!-- <h2 class="underline">Navbar and menu</h2> -->
+<body class="p-4">
+  <h2 class="underline">Navbar and menu(done)</h2>
   <!-- navbar -->
   <nav class="navbar uppercase">
     <div class="navbar-container">
@@ -60,7 +60,6 @@
       </span>
     </div>
   </nav>
-
   <div class="menu sr-only">
     <div class="menu-container uppercase">
       <ul class="menu-items">
@@ -85,25 +84,75 @@
       </ul>
     </div>
   </div>
-  <!-- expanded -->
-  <!-- <div id="menu">
-    <span>
-      <img src="./images/close.svg" alt="close button">
-    </span>
-    <div id="menu-items">
-      <a href="/" class="menu-item">WHAT WE DO</a>
-      <a href="/" class="menu-item">WHO WE ARE</a>
-      <a href="/" class="menu-item">BEING HERE</a>
-      <a href="/" class="menu-item">CAREERS</a>
-    </div>
-    <div id="menu-background-pattern"></div>
-  </div> -->
 
-  <!-- <h2 class="underline">links</h2>
   <h2 class="underline">button: primary and secondary</h2>
+  <div>
+    <h3 class="capitalize">primary button</h3>
+    <br>
+    <button class="btn btn--primary">
+      What we do
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+        <path d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"></path>
+      </svg>
+    </button>
+    <br>
+    <h3 class="capitalize">secondary button</h3>
+    <button class="btn btn--secondary">
+      What we do
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+        <path d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"></path>
+      </svg>
+    </button>
+  </div>
   <h2 class="underline">grid</h2>
-  <h2 class="underline">logos grid</h2> -->
+  <h2 class="underline">logos grid</h2>
+  <section class="companies">
+    <div class="grid">
+      <div class="grid-item">
+        <div class="grid-logo">
+          <img src="./images/companies/🦆 icon _apple_.svg" alt="apple logo">
+        </div>
+        <div class="grid-logo">
+          <img src="./images/companies/🦆 icon _canva_.svg" alt="canva logo">
+        </div>
+        <div class="grid-logo">
+          <img src="./images/companies/🦆 icon _curseforge_.svg" alt="curseforge logo">
+        </div>
+      </div>
 
+      <div class="grid-item">
+        <div class="grid-logo">
+          <img src="./images/companies/🦆 icon _facebook_.svg" alt="facebook logo">
+        </div>
+        <div class="grid-logo">
+          <img src="./images/companies/🦆 icon _fastapi_.svg" alt="fastapi logo">
+        </div>
+        <div class="grid-logo">
+          <img src="./images/companies/🦆 icon _gmail_.svg" alt="gmail logo">
+        </div>
+      </div>
+
+      <div class="grid-item">
+        <div class="grid-logo">
+          <img src="./images/companies/🦆 icon _google_.svg" alt="google logo">
+        </div>
+        <div class="grid-logo">
+          <img src="./images/companies/🦆 icon _instagram_.svg" alt="instagram logo">
+        </div>
+        <div class="grid-logo">
+          <img src="./images/companies/🦆 icon _linkedin_.svg" alt="linkedin logo">
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <button id="toggle" class="btn btn--secondary">
+    Toggle
+  </button>
+
+  <audio id="clickSound" src="./sounds/chime-sound.mp3"></audio>
   <script src="logic.js"></script>
 
 </body>

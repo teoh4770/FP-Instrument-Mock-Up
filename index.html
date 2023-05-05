@@ -10,9 +10,320 @@
 </head>
 
 <body>
+  <!-- navbar: desktop and mobile -->
+  <!-- navbar: desktop -->
+  <nav class="navbar uppercase">
+    <div class="navbar-container container">
+      <!-- logo -->
+      <h4 class="navbar__logo pointer">
+        Instrument
+      </h4>
+      <!-- links -->
+      <ul class="navbar__links">
+        <li class="navbar__link ">
+          <a href="#">what we do </a>
+        </li>
+        <li class="navbar__link ">
+          <a href="#">who we are </a>
+        </li>
+        <li class="navbar__link ">
+          <a href="#">being here</a>
+        </li>
+        <li class="navbar__link ">
+          <a href="#">careers</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <!-- navbar: mobile -->
+  <nav class="navbar navbar--mobile uppercase">
+    <div class="navbar-container container">
+      <!-- logo -->
+      <h4 class="navbar__logo pointer">
+        Instrument
+      </h4>
+      <!-- links -->
+      <span class="navbar__btns pointer">
+        <!-- menu icon -->
+        <svg class="navbar__btn menu-btn not-sr-only" xmlns="http://www.w3.org/2000/svg" height="36"
+          viewBox="0 96 960 960" width="48" fill="currentColor">
+          <path
+            d="M115.935 822.696v-68.131h728.13v68.131h-728.13Zm0-212.631v-68.13h728.13v68.13h-728.13Zm0-212.63v-68.37h728.13v68.37h-728.13Z" />
+        </svg>
+        <!-- close icon -->
+        <svg class="navbar__btn close-btn sr-only" xmlns="http://www.w3.org/2000/svg" height="36" viewBox="0 96 960 960"
+          width="48" fill="currentColor">
+          <path
+            d="M249 854.739 201.261 807l231-231-231-231L249 297.261l231 231 231-231L758.739 345l-231 231 231 231L711 854.739l-231-231-231 231Z" />
+        </svg>
+      </span>
+    </div>
+  </nav>
+  <div class="menu sr-only">
+    <div class="menu-container uppercase">
+      <ul class="menu-items">
+        <li class="menu-item">
+          <a href="#">what we do</a>
+        </li>
+        <li class="menu-item">
+          <a href="#">work</a>
+        </li>
+        <li class="menu-item">
+          <a href="#">who we are</a>
+        </li>
+        <li class="menu-item">
+          <a href="#">being here</a>
+        </li>
+        <li class="menu-item">
+          <a href="#">careers</a>
+        </li>
+        <li class="menu-item">
+          <a href="#">contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <!-- end navbar -->
 
-  <img src="./images/photo-1280-720.jpg" alt="">
+  <!-- hero section start -->
+  <section class="hero">
+    <div class="hero-container container">
+      <h1 class="hero__title">Build. Grow. Serve.</h1>
+      <!-- adding svg to h1 -->
+      <!-- <h1>
+        <span>Build.</span>
+        <span>Grow.</span>
+        <span>Serve.</span>
+      </h1> -->
+      <p class="hero__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+        labore et dolore
+        magna aliqua.</p>
+      <button class="btn btn--primary">
+        Learn More
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+          <path d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"></path>
+        </svg>
+      </button>
+    </div>
+  </section>
+  <!-- hero section end -->
 
+  <section class="video">
+    <img src="./images/photo-1280-720.jpg" alt="sample image">
+  </section>
+
+  <!-- mission section start -->
+  <section class="mission">
+
+    <!-- company statement -->
+
+    <div class="container">
+      <h3 class="mission-statement">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua.
+      </h3>
+    </div>
+    <!-- company statement end -->
+
+    <!-- mission 1 -->
+    <article class="mission-content container">
+      <img src="./images/photo-1280-720.jpg" alt="sample image">
+      <div class="mission-content__text">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+          dolore
+          magna aliqua.
+        </p>
+        <button class="btn btn--primary">
+          What we do
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+            <path d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"></path>
+          </svg>
+        </button>
+      </div>
+    </article>
+    <!-- end mission 1 -->
+
+    <!-- mission 2 -->
+    <article class="mission-content mission-content--flip container">
+      <img src="./images/photo-1280-720.jpg" alt="sample image">
+      <div class="mission-content__text">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+          dolore
+          magna aliqua.
+        </p>
+        <button class="btn btn--primary">
+          What we do
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+            <path d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"></path>
+          </svg>
+        </button>
+      </div>
+    </article>
+    <!-- end mission 2 -->
+  </section>
+  <!-- mission section end -->
+
+  <!-- works section start -->
+  <section class="work">
+    <!-- work call-to-action start -->
+    <article class="cta">
+      <h3>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit
+      </h3>
+      <button class="btn btn--primary">
+        What we do
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+          <path d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"></path>
+        </svg>
+      </button>
+    </article>
+    <!-- work call-to-action end -->
+
+    <!-- work content -->
+    <div class="work-content">
+      <article class="feature">
+        <img src="./images/photo-1280-720.jpg" alt="sample image">
+        <div class="feature__text">
+          <h4>
+            Company Name
+          </h4>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore
+            magna aliqua.
+          </p>
+        </div>
+      </article>
+      <article class="feature">
+        <img src="./images/photo-1280-720.jpg" alt="sample image">
+        <div class="feature__text">
+          <h4>
+            Company Name
+          </h4>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore
+            magna aliqua.
+          </p>
+        </div>
+      </article>
+    </div>
+    <!-- end work content -->
+  </section>
+
+  <!-- collaborator -->
+  <section class="collaborator">
+    <div class="grid collaborator-grid container">
+      <div class="grid-item">
+        <div class="grid-logo">
+          <img src="./images/companies/🦆 icon _apple_.svg" alt="apple logo">
+        </div>
+        <div class="grid-logo">
+          <img src="./images/companies/🦆 icon _canva_.svg" alt="canva logo">
+        </div>
+        <div class="grid-logo">
+          <img src="./images/companies/🦆 icon _curseforge_.svg" alt="curseforge logo">
+        </div>
+      </div>
+
+      <div class="grid-item">
+        <div class="grid-logo">
+          <img src="./images/companies/🦆 icon _facebook_.svg" alt="facebook logo">
+        </div>
+        <div class="grid-logo">
+          <img src="./images/companies/🦆 icon _fastapi_.svg" alt="fastapi logo">
+        </div>
+        <div class="grid-logo">
+          <img src="./images/companies/🦆 icon _gmail_.svg" alt="gmail logo">
+        </div>
+      </div>
+
+      <div class="grid-item">
+        <div class="grid-logo">
+          <img src="./images/companies/🦆 icon _google_.svg" alt="google logo">
+        </div>
+        <div class="grid-logo">
+          <img src="./images/companies/🦆 icon _instagram_.svg" alt="instagram logo">
+        </div>
+        <div class="grid-logo">
+          <img src="./images/companies/🦆 icon _linkedin_.svg" alt="linkedin logo">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact">
+    <article class="cta">
+      <h3>
+        We’d love to work with you and your team
+      </h3>
+      <button class="btn btn--primary">
+        Get in touch
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+          <path d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"></path>
+        </svg>
+      </button>
+    </article>
+    <!-- work call-to-action end -->
+  </section>
+
+  <!-- links -->
+  <footer class="footer container">
+    <ul class="footer-navigation">
+      <div>
+        <li><a>Home</a></li>
+        <li><a>What we do</a></li>
+        <li><a>Work</a></li>
+        <li><a>Who we are</a></li>
+        <li><a>Articles</a></li>
+      </div>
+      <div>
+        <li><a>Being here</a></li>
+        <li><a>Careers</a></li>
+        <li><a>Contact</a></li>
+        <li><a>Privacy</a></li>
+      </div>
+    </ul>
+
+    <section class="socials">
+      <button class="btn btn--secondary">
+        Newsletter
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+          <path d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"></path>
+        </svg>
+      </button>
+      <ul aria-label="List of links to Instrument's social media accounts">
+        <li>
+          <a class="social-link" href="#" target="_blank">
+            <span class="sr-only">Instrument on Instagram</span>
+            <img src="./images/logo_svg/instagram.svg" alt="Instagram image">
+          </a>
+        </li>
+        <li>
+          <a class="social-link" href="#" target="_blank">
+            <span class="sr-only">Instrument on Twitter</span>
+            <img src="./images/logo_svg/twitter.svg" alt="Twitter image">
+          </a>
+        </li>
+        <li>
+          <a class="social-link" href="#" target="_blank">
+            <span class="sr-only">Instrument on LinkedIn</span>
+            <img src="./images/logo_svg/linkedin.svg" alt="Instagram image">
+          </a>
+        </li>
+      </ul>
+    </section>
+  </footer>
+  <br>
+  <button id="toggle" class="btn btn--secondary">
+    Toggle
+  </button>
+
+  <audio id="clickSound" src="./sounds/chime-sound.mp3"></audio>
+
+  <script src="logic.js"></script>
 </body>
 
 </html>
