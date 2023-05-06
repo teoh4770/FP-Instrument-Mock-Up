@@ -77,31 +77,24 @@ h6 {
 
 /* heading setting */
 h1 {
-  font-size: clamp(5.5rem, 4vw, 6rem);
+  font-size: clamp(4rem, 4vw, 6rem);
   font-weight: normal;
   letter-spacing: -1.5;
   line-height: clamp(6.5rem, 4vw, 7rem);
 }
 
 h2 {
-  font-size: clamp(3.25rem, 4vw, 3.75rem);
-  font-weight: normal;
-  letter-spacing: -0.5;
-  line-height: clamp(4.25rem, 4vw, 4.75rem);
-}
-
-h3 {
-  font-size: clamp(2rem, 4vw, 3rem);
+  font-size: clamp(1.25rem, 4vw, 2rem);
   font-weight: normal;
   letter-spacing: 0;
-  line-height: clamp(4rem, 4vw, 5rem);
+  line-height: clamp(2.4rem, 4vw, 4rem);
 }
 
 h4 {
-  font-size: clamp(1.61rem, 4vw, 1.8rem);
+  font-size: clamp(1.1rem, 4vw, 1.5rem);
   font-weight: normal;
   letter-spacing: 0.25;
-  line-height: clamp(2.61rem, 4vw, 3.11rem);
+  line-height: clamp(2.2rem, 4vw, 3.1rem);
 }
 
 p {
@@ -115,14 +108,8 @@ button {
   text-transform: uppercase;
 }
 
-a {
-  font-size: 0.875rem;
-  text-transform: uppercase;
-  word-spacing: 3px;
-}
-
-.subtitle {
-  letter-spacing: 0.5;
+img {
+  width: 100%;
 }
 
 /***
@@ -257,6 +244,10 @@ This can be useful when you want to visually hide something on small screens but
   margin-top: 10rem;
 }
 
+.subtitle {
+  font-size: 0.85rem;
+}
+
 /* a,
 a:hover,
 a:link,
@@ -283,13 +274,20 @@ svg {
   fill: currentColor;
 }
 
+button {
+  font-size: 0.9rem;
+}
+
 a {
   text-decoration: none;
   color: var(--secondary);
   opacity: 0.85;
-  font-size: 0.9rem;
   position: relative;
   cursor: pointer;
+
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  word-spacing: 3px;
 }
 
 a:hover {
@@ -316,7 +314,7 @@ a::after {
 
 a:hover::before,
 a:hover::after {
-  opacity: 0.7;
+  opacity: 1;
 }
 
 .link::before,
@@ -731,6 +729,33 @@ button {
   .socials {
     flex-direction: column;
     align-items: start;
+  }
+}
+
+@media (max-width: 500px) {
+  .contact,
+  .cta {
+    height: unset;
+  }
+
+  .cta {
+    padding-block: 3rem;
+  }
+
+  .mission {
+    padding-top: 3rem;
+  }
+
+  .mission > * + * {
+    margin-top: 5rem;
+  }
+
+  .hero__text {
+    width: 100%;
+  }
+
+  section {
+    padding-bottom: 5rem;
   }
 }
 
