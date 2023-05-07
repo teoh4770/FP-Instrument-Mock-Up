@@ -2,14 +2,17 @@
 const COLUMNS = 3;
 const ANIMATIONCHANGED = 1500; //1.5s
 
+let lastScrollTop = pageYOffset || window.scrollY;
+
 // Selectors
 const menu = document.querySelector(".navbar__menu");
 const menuIcon = document.querySelector(".js-menu");
 const closeIcon = document.querySelector(".js-close");
 const navBtn = document.querySelector(".navbar__btn");
-const gridItems = document.getElementsByClassName("grid-item");
+const gridItems = document.getElementsByClassName("js-grid-item");
+const logos = Array.from(document.getElementsByClassName("js-collab__logo"));
 const toggleBtn = document.getElementById("toggle");
-const logos = Array.from(document.getElementsByClassName("grid-logo"));
+const navbars = document.querySelectorAll(".navbar");
 
 // background toggle
 // mix-blend-mode
@@ -122,3 +125,24 @@ navBtn.addEventListener("click", () => {
     e.classList.toggle("sr-only");
   });
 });
+
+window.addEventListener("scroll", scrolling);
+
+function scrolling() {
+  let scrollTop = pageYOffset || window.scrollY;
+
+  if (scrollTop > lastScrollTop) {
+    // down scroll code
+    console.log("scrolling down");
+    navbars.forEach((navbar) => {
+      navbar.classList.add("hide");
+    });
+  } else if (scrollTop < lastScrollTop) {
+    // up scroll code
+    console.log("scrolling up");
+    navbars.forEach((navbar) => {
+      navbar.classList.remove("hide");
+    });
+  }
+  lastScrollTop = scrollTop < 0 ? 0 : scrollTop;
+}

@@ -1,4 +1,184 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap");
+
+/***
+  Custom variables
+***/
+:root {
+  /* neutral color */
+  --primary: hsl(0, 0%, 0%);
+  --secondary: hsl(0, 0%, 100%);
+  --primary-replace: 0 0 0;
+  --secondary-replace: 255 255 255;
+
+  /* general spacing */
+  --padding: 2rem;
+
+  /* navbar height */
+  --nav-height: 5rem;
+
+  /* container padding */
+  --container-padding: clamp(2rem, 4vw, 4rem);
+}
+
+/***
+  Utility class
+***/
+
+/* White Color Modifiers  */
+.text--light-3 {
+  color: rgba(var(--secondary-replace) / 1);
+}
+.text--light-2 {
+  color: rgba(var(--secondary-replace) / 0.7);
+}
+.text--light-1 {
+  color: rgba(var(--secondary-replace) / 0.5);
+}
+.text--light-0 {
+  color: rgba(var(--secondary-replace) / 0.12);
+}
+
+/* Black Color Modifiers */
+.text--dark-3 {
+  color: rgba(var(--primary-replace) / 0.87);
+}
+.text--dark-2 {
+  color: rgba(var(--primary-replace) / 0.54);
+}
+.text--dark-1 {
+  color: rgba(var(--primary-replace) / 0.38);
+}
+.text--dark-0 {
+  color: rgba(var(--primary-replace) / 0.12);
+}
+
+/* Text Size Modifers */
+.text--large {
+  font-size: 1.333rem;
+  letter-spacing: 0.005rem;
+  line-height: 1.333;
+}
+.text--default {
+  font-size: 1rem;
+  line-height: 1.618;
+}
+.text--small {
+  font-size: 0.75rem;
+  letter-spacing: 0.02rem;
+  line-height: 1.618;
+}
+
+/* Text variant Modifiers -- inline */
+.text--caps {
+  font-size: 0.853rem;
+  font-weight: 600;
+  letter-spacing: 0.06rem;
+  text-transform: uppercase;
+}
+
+.dark-mode {
+  --primary: hsl(0, 0%, 0%);
+  --secondary: hsl(0, 0%, 100%);
+}
+
+.light-mode {
+  --primary: hsl(0, 0%, 100%);
+  --secondary: hsl(0, 0%, 0%);
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.active {
+  font-weight: bold;
+}
+
+.hidden {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  visibility: hidden;
+  opacity: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* 
+This can be useful when you want to visually hide something on small screens but show it on larger screens */
+.not-sr-only {
+  position: static;
+  width: auto;
+  height: auto;
+  padding: 0;
+  margin: 0;
+  visibility: visible;
+  opacity: 1;
+  overflow: visible;
+  clip: auto;
+  white-space: normal;
+}
+
+.hide {
+  transform: translateY(-100%);
+}
+
+.fw-normal {
+  font-weight: normal;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+.container {
+  padding-inline: clamp(2rem, 4vw, 4rem);
+}
+
+.flow > * + * {
+  margin-top: 10rem;
+}
+
+.subtitle {
+  font-size: 0.85rem;
+}
+
+.grid {
+  max-width: 1084px;
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.margin-center {
+  margin-inline: auto;
+}
 
 /***
   Josh Comeau CSS Reset 
@@ -36,7 +216,7 @@ body {
   5. Improve text rendering
 */
 body {
-  line-height: 1.5;
+  line-height: 1.333;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -50,6 +230,10 @@ canvas,
 svg {
   display: block;
   max-width: 100%;
+}
+
+img {
+  width: 100%;
 }
 
 /*
@@ -75,30 +259,51 @@ h6 {
   overflow-wrap: break-word;
 }
 
-/* heading setting */
+body {
+  color: var(--secondary);
+  background-color: var(--primary);
+
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  line-height: 1.333;
+
+  position: relative;
+}
+
+/* Header Sizes */
 h1 {
-  font-size: clamp(4rem, 4vw, 6rem);
-  font-weight: normal;
-  letter-spacing: -1.5;
-  line-height: clamp(6.5rem, 4vw, 7rem);
+  font-size: 3.157rem;
+  letter-spacing: 0.03rem;
+  line-height: 1.333;
+}
+
+/* overwrite h1 */
+h1 {
+  font-size: 3.657rem;
 }
 
 h2 {
-  font-size: clamp(1.25rem, 4vw, 2rem);
-  font-weight: normal;
-  letter-spacing: 0;
-  line-height: clamp(2.4rem, 4vw, 4rem);
+  font-size: 2.369rem;
+  letter-spacing: 0.07rem;
+  line-height: 1.333;
 }
 
-h4 {
-  font-size: clamp(1.1rem, 4vw, 1.5rem);
-  font-weight: normal;
-  letter-spacing: 0.25;
-  line-height: clamp(2.2rem, 4vw, 3.1rem);
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Roboto Slab", serif;
+  margin: 0;
+  margin-top: 1.618rem; /*  Golden ratio  */
+  margin-bottom: 1.333rem; /*  Perfect Fourth  */
 }
 
 p {
-  font-size: clamp(1rem, 3vw, 1.3rem);
+  line-height: 1.618 !important;
+  margin: 0;
+  margin-bottom: 0.75rem;
+  /* Body size(1rem / 1.333)   */
 }
 
 button {
@@ -108,163 +313,7 @@ button {
   text-transform: uppercase;
 }
 
-img {
-  width: 100%;
-}
-
-/***
-  Custom variables
-***/
-:root {
-  /* color */
-  --purple: hsl(231, 100%, 71%);
-  --beige-orange: hsl(14, 100%, 78%);
-
-  /* neutral color */
-  --primary: hsl(0, 0%, 0%);
-  --secondary: hsl(0, 0%, 100%);
-
-  /* font */
-  --ff-serif: "Roboto", sans-serif;
-  --fs-normal: 16px;
-
-  /* general spacing */
-  --padding: 2rem;
-
-  /* navbar height */
-  --nav-height: 5rem;
-
-  /* container padding */
-  --container-padding: clamp(2rem, 4vw, 4rem);
-}
-
-/* end custom variables */
-
-/***
-  Utility class
-***/
-.dark-mode {
-  --primary: hsl(0, 0%, 0%);
-  --secondary: hsl(0, 0%, 100%);
-}
-
-.light-mode {
-  --primary: hsl(0, 0%, 100%);
-  --secondary: hsl(0, 0%, 0%);
-}
-
-.underline {
-  text-decoration: underline;
-}
-
-.active {
-  font-weight: bold;
-}
-
-.hidden {
-  display: none;
-}
-
-.show {
-  display: block;
-}
-
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  visibility: hidden;
-  opacity: 0;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border-width: 0;
-}
-
-/* 
-This can be useful when you want to visually hide something on small screens but show it on larger screens */
-.not-sr-only {
-  position: static;
-  width: auto;
-  height: auto;
-  padding: 0;
-  margin: 0;
-  visibility: visible;
-  opacity: 1;
-  overflow: visible;
-  clip: auto;
-  white-space: normal;
-}
-
-.fw-normal {
-  font-weight: normal;
-}
-
-.capitalize {
-  text-transform: capitalize;
-}
-
-.uppercase {
-  text-transform: uppercase;
-}
-
-.text-dark {
-  color: var(--primary);
-}
-
-.text-white {
-  color: var(--secondary);
-}
-
-.bg-dark {
-  background-color: var(--primary);
-}
-
-.bg-white {
-  background-color: var(--secondary);
-}
-
-.cursor {
-  cursor: pointer;
-}
-
-.p-4 {
-  padding: 1rem;
-}
-
-.container {
-  padding-inline: clamp(2rem, 4vw, 4rem);
-}
-
-.flow > * + * {
-  margin-top: 10rem;
-}
-
-.subtitle {
-  font-size: 0.85rem;
-}
-
-/* a,
-a:hover,
-a:link,
-a:visited,
-a:active {
-  text-decoration: none;
-} */
-
-/* end utility class */
-
 /* general styling */
-body {
-  font-family: var(--ff-serif);
-  font-size: var(--fs-normal);
-  font-weight: 300;
-  color: var(--secondary);
-  background-color: var(--primary);
-  position: relative;
-}
 
 svg {
   fill: currentColor;
@@ -343,6 +392,13 @@ button {
 /* styling here */
 
 /* navbar: refactor complete */
+.navbar {
+  position: fixed;
+  width: 100%;
+  background-color: var(--primary);
+  transition: transform 500ms ease-in;
+}
+
 .navbar-container {
   display: flex;
   justify-content: space-between;
@@ -368,8 +424,6 @@ button {
   .navbar--mobile {
     display: block;
     width: 100%;
-
-    position: fixed;
 
     background-color: var(--primary);
   }
@@ -405,63 +459,58 @@ button {
   padding: 0.65rem 1.5rem;
 
   width: fit-content;
+
+  background: transparent;
+  color: var(--secondary);
+  outline: 2px solid var(--secondary);
 }
 .btn > svg {
   display: inline-block;
 }
 
-.btn:hover,
-.btn:focus {
-  filter: brightness(70%);
+.btn--white {
+  background: transparent;
+  color: var(--secondary);
+  outline: 1px solid var(--secondary);
 }
 
-.btn--primary {
+.btn--white:hover {
+  transition: all 200ms ease-in-out;
+  background: var(--secondary);
   color: var(--primary);
-  background-color: var(--secondary);
 }
-.btn--secondary {
-  --primary: var(--secondary);
-  --secondary: var(--primary);
+
+.btn--dark {
+  background: var(--primary);
+  outline: 1px solid rgba(211, 211, 211, 0.328);
 }
+
 /* button refactoring: complete */
 
-/* grid refactoring: doing */
-.grid {
-  max-width: 1084px;
-  margin-inline: auto;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
-}
+/* grid refactoring: finished */
 
-.grid-item {
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-  height: 250px;
+.grid__col {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  margin-block: auto;
+
+  width: 100%;
+  aspect-ratio: 1;
+
+  position: relative;
+  overflow: hidden;
 }
 
-.grid-logo {
+.collab__logo {
   transform: translateY(-500%);
   position: absolute;
   visibility: hidden;
   opacity: 0;
 }
+/* grid refactoring: finished */
 
-/* toggle the animation class to activate the animation */
-.animation {
-  animation-name: fadeInDown, fadeOutUp;
-  animation-fill-mode: forwards;
-  animation-delay: 0s, 2.5s;
-  animation-duration: 500ms, 150ms;
-}
-
-.grid-logo > img {
+.collab__logo > img {
   width: clamp(50px, 10vw, 80px);
   height: auto;
   position: relative;
@@ -469,8 +518,8 @@ button {
 
 /* hero section */
 .hero {
-  height: calc(100% - var(--nav-height));
-  margin-top: unset;
+  height: 100%;
+  min-height: calc(100% - var(--nav-height));
 }
 
 .hero-container {
@@ -481,9 +530,13 @@ button {
   gap: 2em;
 }
 
-.hero__text {
-  width: 60%;
+@media (min-width: 575px) {
+  .hero__text {
+    max-width: 510px;
+    width: 100%;
+  }
 }
+
 /* end hero section */
 
 /* mission */
@@ -499,9 +552,16 @@ button {
 .mission-statement,
 .cta {
   /* padding-block: 10rem; */
-  width: 70%;
+  width: 100%;
   text-align: center;
   margin-inline: auto;
+}
+
+@media (min-width: 576px) {
+  .mission-statement,
+  .cta {
+    max-width: 80%;
+  }
 }
 
 .mission-content {
@@ -570,32 +630,33 @@ button {
 /* end mission */
 
 /* work section */
-.cta > * {
-  margin-inline: auto;
+
+.work {
+  padding-top: 10rem;
 }
 
-.cta > * + * {
-  margin-top: 1em;
+.work > * + * {
+  margin-top: 10rem;
 }
 
 .cta {
-  height: calc(100vh - var(--nav-height));
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.feature > * {
+.work__feature > * {
   padding-inline: var(--container-padding);
 }
 
 .feature__text {
-  padding-block: 2rem;
+  padding-top: 2rem;
+  padding-bottom: 3.5rem;
 }
 
 @media (max-width: 780px) {
-  .feature > img {
+  .work__feature > img {
     padding-inline: unset;
   }
 }
@@ -612,11 +673,11 @@ button {
 }
 
 @media (min-width: 900px) {
-  .feature > * {
+  .work__feature > * {
     padding-inline: 0;
   }
 
-  .work-content {
+  .work__content {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(min(22rem, 100%), 1fr));
     gap: 2rem;
@@ -630,11 +691,12 @@ button {
 }
 /* end work section */
 
-
-
 /* contacts */
 .contact {
-  height: calc(100vh - var(--nav-height));
+  padding-top: clamp(5rem, 20vw, 15rem);
+  padding-bottom: clamp(10rem, 20vw, 20rem);
+  /* 2 - 10 */
+  /* 5 - 15 */
 }
 
 /* end of contacts */
@@ -716,10 +778,6 @@ button {
     height: unset;
   }
 
-  .cta {
-    padding-block: 3rem;
-  }
-
   .mission {
     padding-top: 3rem;
   }
@@ -740,6 +798,13 @@ button {
 /* socials logo */
 html.light-mode .socials > ul > li {
   mix-blend-mode: difference;
+}
+
+.animation {
+  animation-name: fadeInDown, fadeOutUp;
+  animation-fill-mode: forwards;
+  animation-delay: 0s, 2.5s;
+  animation-duration: 500ms, 150ms;
 }
 
 @keyframes fadeInDown {
