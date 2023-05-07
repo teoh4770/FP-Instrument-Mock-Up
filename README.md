@@ -28,29 +28,15 @@ Up for a challenge?
 
 ### Screenshot
 
-Desktop view (has light mode!)
+Desktop view 
 
-- Hero section
+![图片](https://user-images.githubusercontent.com/98545971/236681715-c82d451e-7e59-4a8c-b53b-823c236c2e5b.png)
 
-![Screen Shot 2023-05-05 at 22 28 57](https://user-images.githubusercontent.com/98545971/236594068-0a619e8e-4ec3-4e38-95e6-6c8bf827140f.png)
+![图片](https://user-images.githubusercontent.com/98545971/236681732-6011a557-bf66-4973-b65e-07e5a0802d1b.png)
 
-- Work section
+Mobile View
 
-![Screen Shot 2023-05-05 at 22 29 24](https://user-images.githubusercontent.com/98545971/236594077-e6b31085-36c1-4ddf-bbb2-1f08c0fac2dd.png)
-
-- Companies logo transition
-
-![Screen Shot 2023-05-05 at 22 29 19](https://user-images.githubusercontent.com/98545971/236594086-b2158bf0-7c6c-44a5-bc52-33fb33d919ef.png)
-
-Mobile view
-
-- Hero section(mobile)
-
-![Screen Shot 2023-05-05 at 22 35 41](https://user-images.githubusercontent.com/98545971/236594187-bdb91c75-37da-4495-b4ca-2848646795a0.png)
-
-- Footer section(mobile)
-
-![Screen Shot 2023-05-05 at 22 30 54](https://user-images.githubusercontent.com/98545971/236594174-1e37c65e-e58f-4ca4-b494-57ea8e390142.png)
+![图片](https://user-images.githubusercontent.com/98545971/236681764-280f9f2e-a995-48d5-8f93-30842ae07cc7.png)
 
 
 ### Links
@@ -81,11 +67,7 @@ Mobile view
 - [mix-blend-mode - Kevin Powell](https://codepen.io/daveredfern/pen/zBGBJV)(https://youtu.be/wLPIwZdo0gM)
 - [Alternate navbar with the sibling selector - article](https://developer.mozilla.org/en-US/docs/Web/CSS/Adjacent_sibling_combinator)
 - [Add sound effect when click - wesbos JS30 first Drumkit challenge](https://github.com/wesbos/JavaScript30/)
-
-### What to improve next time?
-
-- Mainly the cleanliness of the code itself. Code can be refactored, especially the CSS parts! (I believe I wrote tons of repetitive code 😭 )
-  - What to do?: View other people's code, see how they structured and organize their code, and implement their styles into yours!
+- [Updated - Consistent typography + text utility class](https://codepen.io/danradenkovic/pen/pEwrYP)
   
 ## Author
 
