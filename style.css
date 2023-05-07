@@ -393,7 +393,11 @@ button {
 }
 /* navbar: refactor complete */
 
-/* button refactoring */
+/* button refactoring: complete */
+#toggle {
+  margin: 10px;
+}
+
 .btn {
   display: flex;
   align-items: center;
@@ -401,40 +405,27 @@ button {
   padding: 0.65rem 1.5rem;
 
   width: fit-content;
-
-  outline: 1px solid #333;
-  border-radius: 1.5rem;
-
-  color: var(--primary);
-  background-color: var(--secondary);
 }
-
-.btn:hover {
-  filter: brightness(70%);
-}
-
-.btn--primary {
-  background-color: var(--secondary);
-  color: var(--primary);
-}
-
-.btn--secondary {
-  background-color: var(--primary);
-  color: var(--secondary);
-}
-
 .btn > svg {
   display: inline-block;
 }
 
-.btn--primary > svg {
+.btn:hover,
+.btn:focus {
+  filter: brightness(70%);
+}
+
+.btn--primary {
   color: var(--primary);
+  background-color: var(--secondary);
 }
-
-.btn--secondary > svg {
-  color: var(--secondary);
+.btn--secondary {
+  --primary: var(--secondary);
+  --secondary: var(--primary);
 }
+/* button refactoring: complete */
 
+/* grid refactoring: doing */
 .grid {
   max-width: 1084px;
   margin-inline: auto;
@@ -452,6 +443,7 @@ button {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  margin-block: auto;
 }
 
 .grid-logo {
@@ -638,20 +630,7 @@ button {
 }
 /* end work section */
 
-/* collaborator */
-/* .collaborator {
-  height: calc(100vh - var(--nav-height));
-}
 
-.collaborator > .container {
-  height: 100%;
-} */
-
-.grid-item {
-  margin-block: auto;
-}
-
-/* end of collaborator */
 
 /* contacts */
 .contact {
