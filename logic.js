@@ -3,10 +3,10 @@ const COLUMNS = 3;
 const ANIMATIONCHANGED = 1500; //1.5s
 
 // Selectors
-const menu = document.querySelector(".menu");
-const menuBtn = document.querySelector(".menu-btn");
-const closeBtn = document.querySelector(".close-btn");
-const navBtn = document.querySelector(".navbar__btns");
+const menu = document.querySelector(".navbar__menu");
+const menuIcon = document.querySelector(".js-menu");
+const closeIcon = document.querySelector(".js-close");
+const navBtn = document.querySelector(".navbar__btn");
 const gridItems = document.getElementsByClassName("grid-item");
 const toggleBtn = document.getElementById("toggle");
 const logos = Array.from(document.getElementsByClassName("grid-logo"));
@@ -115,11 +115,10 @@ function resetIndex(currentIndex, limit) {
 // navbar
 
 navBtn.addEventListener("click", () => {
-  console.log("click");
-  [menu, closeBtn, menuBtn].forEach((e) => {
+  [menu, closeIcon, menuIcon].forEach((e) => {
     e.classList.toggle("not-sr-only");
   });
-  [menuBtn].forEach((e) => {
+  [menuIcon].forEach((e) => {
     e.classList.toggle("sr-only");
   });
 });

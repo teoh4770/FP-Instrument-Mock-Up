@@ -10,80 +10,67 @@
 </head>
 
 <body>
-  <!-- navbar: desktop and mobile -->
-  <!-- navbar: desktop -->
   <nav class="navbar uppercase">
     <div class="navbar-container container">
-      <!-- logo -->
-      <h4 class="navbar__logo pointer">
-        Instrument
-      </h4>
-      <!-- links -->
+      <h2 class="navbar__logo cursor">Instrument</h2>
       <ul class="navbar__links">
-        <li class="navbar__link ">
-          <a href="#">what we do </a>
+        <li>
+          <a href="#">what we do</a>
         </li>
-        <li class="navbar__link ">
-          <a href="#">who we are </a>
+        <li>
+          <a href="#">who we are</a>
         </li>
-        <li class="navbar__link ">
+        <li>
           <a href="#">being here</a>
         </li>
-        <li class="navbar__link ">
+        <li>
           <a href="#">careers</a>
         </li>
       </ul>
     </div>
   </nav>
-  <!-- navbar: mobile -->
   <nav class="navbar navbar--mobile uppercase">
     <div class="navbar-container container">
-      <!-- logo -->
-      <h4 class="navbar__logo pointer">
-        Instrument
-      </h4>
-      <!-- links -->
-      <span class="navbar__btns pointer">
-        <!-- menu icon -->
-        <svg class="navbar__btn menu-btn not-sr-only" xmlns="http://www.w3.org/2000/svg" height="36"
-          viewBox="0 96 960 960" width="48" fill="currentColor">
+      <h2 class="navbar__logo cursor">Instrument</h2>
+      <span class="navbar__btn cursor">
+        <svg class="js-menu not-sr-only" xmlns="http://www.w3.org/2000/svg" height="36" viewBox="0 96 960 960"
+          width="48" fill="currentColor">
           <path
             d="M115.935 822.696v-68.131h728.13v68.131h-728.13Zm0-212.631v-68.13h728.13v68.13h-728.13Zm0-212.63v-68.37h728.13v68.37h-728.13Z" />
         </svg>
-        <!-- close icon -->
-        <svg class="navbar__btn close-btn sr-only" xmlns="http://www.w3.org/2000/svg" height="36" viewBox="0 96 960 960"
-          width="48" fill="currentColor">
+        <svg class="js-close sr-only" xmlns="http://www.w3.org/2000/svg" height="36" viewBox="0 96 960 960" width="48"
+          fill="currentColor">
           <path
             d="M249 854.739 201.261 807l231-231-231-231L249 297.261l231 231 231-231L758.739 345l-231 231 231 231L711 854.739l-231-231-231 231Z" />
         </svg>
       </span>
     </div>
+    <section class="navbar__menu sr-only">
+      <div class="menu-container uppercase">
+        <ul class="menu__items">
+          <li class="menu__item">
+            <a href="#">what we do</a>
+          </li>
+          <li class="menu__item">
+            <a href="#">work</a>
+          </li>
+          <li class="menu__item">
+            <a href="#">who we are</a>
+          </li>
+          <li class="menu__item">
+            <a href="#">being here</a>
+          </li>
+          <li class="menu__item">
+            <a href="#">careers</a>
+          </li>
+          <li class="menu__item">
+            <a href="#">contact</a>
+          </li>
+        </ul>
+      </div>
+    </section>
   </nav>
-  <div class="menu sr-only">
-    <div class="menu-container uppercase">
-      <ul class="menu-items">
-        <li class="menu-item">
-          <a href="#">what we do</a>
-        </li>
-        <li class="menu-item">
-          <a href="#">work</a>
-        </li>
-        <li class="menu-item">
-          <a href="#">who we are</a>
-        </li>
-        <li class="menu-item">
-          <a href="#">being here</a>
-        </li>
-        <li class="menu-item">
-          <a href="#">careers</a>
-        </li>
-        <li class="menu-item">
-          <a href="#">contact</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-  <!-- end navbar -->
+  
 
   <!-- hero section start -->
   <section class="hero">
@@ -272,7 +259,7 @@
   <footer class="footer container">
     <ul class="footer-navigation">
       <div>
-        <li><a href="#">Home</a></li>
+        <li><a>Home</a></li>
         <li><a>What we do</a></li>
         <li><a>Work</a></li>
         <li><a>Who we are</a></li>
